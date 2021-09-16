@@ -17,7 +17,6 @@
     margin: 0 -10px 0;
   }
 
-
   // &__item {
   // }
 
@@ -25,5 +24,11 @@
     display: block;
     padding: 20px 10px;
     font-size: 1.125rem;
+    transition: 0.5s;
+
+    &:hover {
+      color: $color-accent;
+      transition: 0.5s;
+    }
   }
 }

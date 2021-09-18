@@ -6,23 +6,17 @@
     display: none;
   }
 
-  // &__btn-row {
-  // }
-
   &__list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
     justify-content: end;
-    gap: 20px;
-    margin: 0 -10px 0;
+    gap: $gap;
+    margin: 0 -$gap-sm 0;
   }
-
-  // &__item {
-  // }
 
   &__link {
     display: block;
-    padding: 20px 10px;
+    padding: $gap $gap-sm;
     font-size: 1.125rem;
     transition: 0.5s;
 

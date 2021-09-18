@@ -2,33 +2,33 @@
 @use "../mixins" as *;
 
 .btn {
-  height: 60px;
+  height: $gap-x3;
   padding-left: 1em;
   padding-right: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  font-size: 18px;
+  font-size: 1.125rem;
   letter-spacing: 0.1em;
   transition: 0.5s;
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+  }
+
+  &--light {
+    width: 250px;
+    background-color: rgba($color-light, 0.1);
+    border: 2px solid $color-light;
+  }
+
+  &--primary {
+    width: 350px;
+    background-color: rgba($color-primary, 0.8);
+    border: 2px solid $color-primary;
+  }
 }
 
-.btn:hover,
-.btn:focus {
-  background-color: $color-accent;
-}
 
-
-
-.btn--primary {
-  width: 350px;
-  background-color: rgba($color-primary, 0.8);
-  border: 2px solid $color-primary;
-}
-
-.btn--light {
-  width: 250px;
-  background-color: rgba($color-light, 0.1);
-  border: 2px solid $color-light;
-}

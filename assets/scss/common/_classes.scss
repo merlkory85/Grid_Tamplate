@@ -2,16 +2,18 @@
 @use "../mixins" as *;
 
 .btn {
-  height: $gap-x3;
   padding-left: 1em;
   padding-right: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  font-size: 1.125rem;
   letter-spacing: 0.1em;
-  transition: 0.5s;
+  transition: background-color 0.5s;
+
+  @include lg-min {
+    font-size: 1.125rem;
+  }
 
   &:hover,
   &:focus {
@@ -19,16 +21,38 @@
   }
 
   &--light {
-    width: 250px;
     background-color: rgba($color-light, 0.1);
     border: 2px solid $color-light;
+
+    @include lg-min {
+      width: 250px;
+      height: $gap-x3;
+      font-size: 1.125rem;
+    }
+
+    @include lg-md {
+      width: 200px;
+      height: $gap-x2-5;
+    }
+
+    @include md {
+      width: 170px;
+      height: $gap-x2;
+    }
   }
 
   &--primary {
-    width: 350px;
     background-color: rgba($color-primary, 0.8);
     border: 2px solid $color-primary;
+    height: $gap-x3;
+    font-size: 1.125rem;
+
+    @include sm-min {
+      width: 350px;
+    }
+
+    @include sm {
+      width: 100%;
+    }
   }
 }
-
-

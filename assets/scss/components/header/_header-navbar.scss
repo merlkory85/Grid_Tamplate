@@ -2,18 +2,85 @@
 @use "../../mixins" as *;
 
 .header-navbar {
+  @include md {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
   &__btn {
-    display: none;
+    width: 30px;
+    height: 22.5px;
+    position: relative;
+    margin: $gap 0;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+
+    @include md-min {
+      display: none;
+    }
+
+    &-row {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background: $color-light;
+      border-radius: 3px;
+      opacity: 1;
+      transform: rotate(0deg);
+      transition: 0.25s ease-in-out;
+      @include abs-position;
+
+      &:nth-child(1) {
+        top: 0px;
+        transform-origin: left center;
+      }
+
+      &:nth-child(2) {
+        top: 9px;
+        transform-origin: left center;
+      }
+
+      &:nth-child(3) {
+        top: 18px;
+        transform-origin: left center;
+      }
+    }
+
+    &--active .header-navbar__btn-row {
+      &:nth-child(1) {
+        transform: rotate(45deg);
+        top: -3px;
+        left: 4px;
+      }
+
+      &:nth-child(2) {
+        width: 0%;
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 18px;
+        left: 4px;
+      }
+    }
   }
 
   &__list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-    justify-content: end;
-    gap: $gap;
     margin: 0 -$gap-sm 0;
-  }
 
+    @include md-min {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+      justify-content: end;
+      gap: $gap;
+    }
+
+    @include md {
+      display: none;
+    }
+  }
   &__link {
     display: block;
     padding: $gap $gap-sm;

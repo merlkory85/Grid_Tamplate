@@ -6,90 +6,127 @@
     display: flex;
     justify-content: flex-end;
   }
-  
+
   &__btn {
+    position: relative;
+
     width: 30px;
     height: 22.5px;
-    position: relative;
     margin: $gap 0;
-    transform: rotate(0deg);
-    transition: 0.5s ease-in-out;
+
     cursor: pointer;
+    transition: 0.5s ease-in-out;
+    transform: rotate(0deg);
 
     @include md-min {
       display: none;
     }
 
     &-row {
+      position: absolute;
+      left: 0;
+
       display: block;
-      height: 3px;
+
       width: 100%;
-      background: $color-light;
-      border-radius: 3px;
-      opacity: 1;
-      transform: rotate(0deg);
+      height: 3px;
+
       transition: 0.25s ease-in-out;
-      @include abs-position;
+      transform: rotate(0deg);
+
+      opacity: 1;
+      border-radius: 3px;
+      background: $color-light;
 
       &:nth-child(1) {
-        top: 0px;
+        top: 0;
+
         transform-origin: left center;
       }
 
       &:nth-child(2) {
         top: 9px;
+
         transform-origin: left center;
       }
 
       &:nth-child(3) {
         top: 18px;
+
         transform-origin: left center;
       }
     }
 
-    &--active .header-navbar__btn-row {
+    &--active span {
       &:nth-child(1) {
-        transform: rotate(45deg);
         top: -3px;
         left: 4px;
+
+        transform: rotate(45deg);
       }
 
       &:nth-child(2) {
-        width: 0%;
+        width: 0;
+
         opacity: 0;
       }
 
       &:nth-child(3) {
-        transform: rotate(-45deg);
-        top: 18px;
+        top: 18.5px;
         left: 4px;
+
+        transform: rotate(-45deg);
       }
     }
   }
 
   &__list {
-    margin: 0 -$gap-sm 0;
-
     @include md-min {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
       justify-content: end;
-      gap: $gap;
-    }
 
+      gap: $gap;
+      grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+      @include unlist(0 -10px 0);
+    }
     @include md {
+      position: absolute;
+      top: 100%;
+      right: $gap;
+
       display: none;
+
+      text-align: right;
+
+      background-color: rgba($color-gray-dark, 0.5);
+
+      @include unlist;
+      @include box-shadow;
     }
   }
+
+  &__item {
+    @include md {
+      margin: $gap;
+    }
+  }
+
   &__link {
     display: block;
-    padding: $gap $gap-sm;
+
+    transition: color 0.25s;
+
     font-size: 1.125rem;
-    transition: 0.5s;
+
+    @include md-min {
+      padding: $gap $gap-sm;
+    }
+    @include md {
+      padding: $gap-sm $gap;
+    }
 
     &:hover {
       color: $color-accent;
-      transition: 0.5s;
     }
   }
 }

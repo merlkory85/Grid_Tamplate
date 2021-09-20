@@ -2,16 +2,24 @@
 @use "../../mixins" as *;
 
 .header-menu {
-  @include abs-position;
+  position: absolute;
   z-index: 2;
+  top: 0;
+
   width: 100%;
-  height: 200px;
+  height: 100px;
+
+  @include md {
+    background-color: rgba($color-gray-dark, 0.25);
+    box-shadow: 0 0 20px -10px darken($color-gray-dark, 40%);
+  }
 
   &__container {
     display: grid;
-    grid-template-columns: auto 1fr;
     align-items: center;
-    gap: $gap;
+
     @extend %container;
+    gap: $gap;
+    grid-template-columns: auto 1fr;
   }
 }

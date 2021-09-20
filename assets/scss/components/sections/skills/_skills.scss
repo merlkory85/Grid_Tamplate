@@ -5,7 +5,6 @@
   @include sm-min {
     padding: $gap-sm;
   }
-
   @include sm {
     padding: $gap;
   }
@@ -14,32 +13,30 @@
     display: grid;
 
     @include lg-min {
+      gap: $gap-sm;
       grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
       grid-template-columns: repeat(4, 1fr);
-      gap: $gap-sm;
     }
-
     @include lg-md {
+      gap: $gap-sm;
       grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
       grid-template-columns: repeat(3, 1fr);
-      gap: $gap-sm;
     }
-
     @include md-sm {
+      gap: $gap-sm;
       grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
       grid-template-columns: repeat (2, 1fr);
-      gap: $gap-sm;
     }
-
     @include sm {
-      grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
       gap: $gap;
+      grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
     }
   }
 
   &__actions {
     display: flex;
     justify-content: center;
+
     margin-top: $gap;
 
     @include sm-min {

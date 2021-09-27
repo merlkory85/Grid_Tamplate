@@ -5,7 +5,7 @@
 /* sm */
 /* xs */
 /* xx */
-.header-content__container, .header-menu__container {
+.about__container, .header-content__container, .header-menu__container {
   max-width: 1340px;
   margin: 0 auto;
   padding-right: 20px;
@@ -341,15 +341,58 @@ li {
   grid-area: a9;
 }
 
-.about__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.about {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #e5e5e5;
 }
-
+.about__container {
+  z-index: 2;
+  display: grid;
+  gap: 100px;
+  grid-template-columns: 1fr 271px;
+}
+.about__title {
+  margin-bottom: 3rem;
+  color: #2d3651;
+  font-family: "Roboto Slab", serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1.2em;
+}
+.about__wrapper--img {
+  display: grid;
+  -ms-flex-line-pack: top;
+      align-content: top;
+  justify-items: center;
+}
+.about__wrapper--text {
+  position: relative;
+}
+.about__wrapper--text::before {
+  position: absolute;
+  z-index: 31;
+  top: 140px;
+  right: 0;
+  margin-right: -45px;
+  display: block;
+  width: 0;
+  height: 200px;
+  content: "";
+  border: 1px solid #c7cfd6;
+}
+.about__text {
+  color: #637588;
+  font-size: 1.125rem;
+}
+.about__text:not(:last-child) {
+  margin-bottom: 1.125rem;
+}
+.about__image {
+  max-width: 100%;
+  max-height: 480px;
+}
 @media (min-width: 576px) {
   .btn--primary {
     width: 350px;
@@ -361,14 +404,12 @@ li {
     margin-bottom: 30px;
   }
 }
-
 @media (min-height: 691px) {
   .skills__container {
     grid-auto-rows: -webkit-calc(33.333vh - 13.333px);
     grid-auto-rows: calc(33.333vh - 13.333px);
   }
 }
-
 @media (min-width: 768px) {
   .header-navbar__btn {
     display: none;
@@ -392,7 +433,6 @@ li {
     font-size: 1.25rem;
   }
 }
-
 @media (min-width: 992px) {
   h1 {
     font-size: 3.75rem;
@@ -411,7 +451,6 @@ li {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
 @media (max-width: 991.8px) and (min-width: 768px) {
   h1 {
     font-size: 2.5rem;
@@ -426,7 +465,6 @@ li {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
 @media (max-width: 767.8px) {
   h1 {
     font-size: 1.875rem;
@@ -471,7 +509,6 @@ li {
     font-size: 1.125rem;
   }
 }
-
 @media (max-width: 767.8px) and (min-width: 576px) {
   .skills__container {
     gap: 10px;
@@ -479,14 +516,12 @@ li {
     grid-template-columns: repeat 2, 1fr;
   }
 }
-
 @media (max-height: 690px) {
   .skills__container {
     grid-auto-rows: -webkit-calc(230px - 13.333px);
     grid-auto-rows: calc(230px - 13.333px);
   }
 }
-
 @media (max-width: 575.8px) {
   .btn--primary {
     width: 100%;

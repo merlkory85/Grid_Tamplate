@@ -14,8 +14,10 @@ html {
 
   letter-spacing: 0.1em;
 
-  font-family: $font-main;
-  font-size: $font-size;
+  font:  {
+    family: $font-main;
+    size: $font-size;
+  }
 }
 
 h1 {
@@ -24,8 +26,10 @@ h1 {
 
   color: $color-light;
 
-  font-family: $font-header;
-  font-weight: 300;
+  font:  {
+    family: $font-header;
+    weight: 300;
+  }
   line-height: 1.2em;
 
   @include lg-min {

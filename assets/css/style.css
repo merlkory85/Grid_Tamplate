@@ -357,7 +357,6 @@ li {
   margin-bottom: 3rem;
   color: #2d3651;
   font-family: "Roboto Slab", serif;
-  font-size: 2.5rem;
   font-weight: 900;
   line-height: 1.2em;
 }
@@ -384,7 +383,6 @@ li {
 }
 .about__text {
   color: #637588;
-  font-size: 1.125rem;
 }
 .about__text:not(:last-child) {
   margin-bottom: 1.125rem;
@@ -450,6 +448,12 @@ li {
     grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
     grid-template-columns: repeat(4, 1fr);
   }
+  .about__title {
+    font-size: 2.5rem;
+  }
+  .about__text {
+    font-size: 1.125rem;
+  }
 }
 @media (max-width: 991.8px) and (min-width: 768px) {
   h1 {
@@ -463,6 +467,15 @@ li {
     gap: 10px;
     grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
     grid-template-columns: repeat(3, 1fr);
+  }
+  .about {
+    padding: 80px 0;
+  }
+  .about__title {
+    font-size: 2rem;
+  }
+  .about__text {
+    font-size: 1rem;
   }
 }
 @media (max-width: 767.8px) {
@@ -507,6 +520,19 @@ li {
   }
   .skill-item__title {
     font-size: 1.125rem;
+  }
+  .about {
+    padding: 60px 0;
+  }
+  .about__container {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .about__title {
+    text-align: center;
+    margin-bottom: 2.25rem;
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 767.8px) and (min-width: 576px) {

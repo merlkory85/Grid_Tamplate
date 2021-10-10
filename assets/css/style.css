@@ -5,7 +5,7 @@
 /* sm */
 /* xs */
 /* xx */
-.posts__container, .form__container, .about__container, .header-content__container, .header-menu__container {
+.footer__container, .posts__container, .form__container, .about__container, .header-content__container, .header-menu__container {
   max-width: 1340px;
   margin: 0 auto;
   padding-right: 20px;
@@ -563,6 +563,27 @@ li {
   grid-area: p6;
 }
 
+.footer {
+  padding-top: 50px;
+  padding-bottom: 70px;
+  text-align: center;
+  background-color: #2d3651;
+}
+.footer__copy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.footer__copy--light {
+  color: #637588;
+}
+.footer__copy--bold {
+  color: #ffffff;
+}
 @media (min-width: 576px) {
   .btn--primary {
     width: 350px;
@@ -574,14 +595,12 @@ li {
     margin-bottom: 30px;
   }
 }
-
 @media (min-height: 691px) {
   .skills__container {
     grid-auto-rows: -webkit-calc(33.333vh - 13.333px);
     grid-auto-rows: calc(33.333vh - 13.333px);
   }
 }
-
 @media (min-width: 768px) {
   .header-navbar__btn {
     display: none;
@@ -605,7 +624,6 @@ li {
     font-size: 1.25rem;
   }
 }
-
 @media (min-width: 992px) {
   h1 {
     font-size: 3.75rem;
@@ -634,13 +652,11 @@ li {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
 @media (max-width: 1199.8px) and (min-width: 992px) {
   .posts__title {
     font-size: 2rem;
   }
 }
-
 @media (max-width: 991.8px) {
   .form-input {
     font-size: 1.125rem;
@@ -652,7 +668,6 @@ li {
     font-size: 1.5rem;
   }
 }
-
 @media (max-width: 991.8px) and (min-width: 768px) {
   h1 {
     font-size: 2.5rem;
@@ -680,7 +695,6 @@ li {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
 @media (max-width: 767.8px) {
   h1 {
     font-size: 1.875rem;
@@ -741,7 +755,6 @@ li {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-
 @media (max-width: 767.8px) and (min-width: 576px) {
   .skills__container {
     gap: 10px;
@@ -761,14 +774,12 @@ li {
     grid-template-columns: 1fr 1fr;
   }
 }
-
 @media (max-height: 690px) {
   .skills__container {
     grid-auto-rows: -webkit-calc(230px - 13.333px);
     grid-auto-rows: calc(230px - 13.333px);
   }
 }
-
 @media (max-width: 575.8px) {
   .btn--primary {
     width: 100%;

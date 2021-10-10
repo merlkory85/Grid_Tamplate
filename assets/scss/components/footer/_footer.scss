@@ -1,43 +1,49 @@
 @use "../../presets" as *;
 @use "../../mixins" as *;
 
+// padding-top: 50px;
+// padding-bottom: 70px;
+// text-align: center;
+// background-color: $color-primary;
+
 .footer {
-  // .footer__container
+  padding-top: 50px;
+  padding-bottom: 70px;
+
+  text-align: center;
+
+  background-color: $color-primary;
 
   &__container {
+    @extend %container;
   }
 
-  // .footer__title
+  // .footer__copy
 
-  &__title {
+  &__copy {
+    display: flex;
+    flex-direction: column;
   }
 
-  // .footer__title-light
+  // .footer__copy--light
 
-  &__title-light {
+  &__copy--light {
+    color: $color-gray;
   }
 
-  // .footer__title-bold
-
-  &__title-bold {
+  &__copy--bold {
+    color: $color-light;
   }
 }
 .footer-social {
   // .footer-social__list
 
-  &__list {
-  }
+
 
   // .footer-social__item
 
-  &__item {
-  }
+
 
   // .footer-social__link
-
-  &__link {
-  }
-}
-.fab {
 }
 

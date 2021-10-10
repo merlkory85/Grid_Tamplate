@@ -564,7 +564,7 @@ li {
 }
 
 .footer {
-  padding-top: 50px;
+  padding-top: 60px;
   padding-bottom: 70px;
   text-align: center;
   background-color: #2d3651;
@@ -579,11 +579,54 @@ li {
           flex-direction: column;
 }
 .footer__copy--light {
-  color: #637588;
+  margin-right: -0.5em;
+  letter-spacing: 0.33em;
+  font-weight: 100;
+  color: #586879;
 }
 .footer__copy--bold {
-  color: #ffffff;
+  letter-spacing: 0.05em;
+  color: #e5e5e5;
+  font-weight: 700;
 }
+
+.footer-social__list {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+.footer-social__list::after {
+  display: block;
+  position: absolute;
+  top: 65px;
+  content: "";
+  width: 75px;
+  border: 1px solid #434f5c;
+}
+.footer-social__link {
+  padding: 9px;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+.footer-social__link:hover {
+  color: #d66926;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.fab {
+  font-size: 2.25rem;
+}
+
 @media (min-width: 576px) {
   .btn--primary {
     width: 350px;
@@ -595,12 +638,14 @@ li {
     margin-bottom: 30px;
   }
 }
+
 @media (min-height: 691px) {
   .skills__container {
     grid-auto-rows: -webkit-calc(33.333vh - 13.333px);
     grid-auto-rows: calc(33.333vh - 13.333px);
   }
 }
+
 @media (min-width: 768px) {
   .header-navbar__btn {
     display: none;
@@ -624,6 +669,7 @@ li {
     font-size: 1.25rem;
   }
 }
+
 @media (min-width: 992px) {
   h1 {
     font-size: 3.75rem;
@@ -652,11 +698,13 @@ li {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
 @media (max-width: 1199.8px) and (min-width: 992px) {
   .posts__title {
     font-size: 2rem;
   }
 }
+
 @media (max-width: 991.8px) {
   .form-input {
     font-size: 1.125rem;
@@ -668,6 +716,7 @@ li {
     font-size: 1.5rem;
   }
 }
+
 @media (max-width: 991.8px) and (min-width: 768px) {
   h1 {
     font-size: 2.5rem;
@@ -695,6 +744,7 @@ li {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 @media (max-width: 767.8px) {
   h1 {
     font-size: 1.875rem;
@@ -755,6 +805,7 @@ li {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
 @media (max-width: 767.8px) and (min-width: 576px) {
   .skills__container {
     gap: 10px;
@@ -774,12 +825,14 @@ li {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media (max-height: 690px) {
   .skills__container {
     grid-auto-rows: -webkit-calc(230px - 13.333px);
     grid-auto-rows: calc(230px - 13.333px);
   }
 }
+
 @media (max-width: 575.8px) {
   .btn--primary {
     width: 100%;

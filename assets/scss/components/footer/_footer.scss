@@ -1,13 +1,8 @@
 @use "../../presets" as *;
 @use "../../mixins" as *;
 
-// padding-top: 50px;
-// padding-bottom: 70px;
-// text-align: center;
-// background-color: $color-primary;
-
 .footer {
-  padding-top: 50px;
+  padding-top: 60px;
   padding-bottom: 70px;
 
   text-align: center;
@@ -18,32 +13,52 @@
     @extend %container;
   }
 
-  // .footer__copy
-
   &__copy {
     display: flex;
     flex-direction: column;
   }
 
-  // .footer__copy--light
-
   &__copy--light {
-    color: $color-gray;
+    margin-right: -0.5em;
+    letter-spacing: 0.33em;
+    font-weight: 100;
+    color: darken($color-gray, $amount: 5);
   }
 
   &__copy--bold {
-    color: $color-light;
+    letter-spacing: 0.05em;
+    color: $color-gray-light;
+    font-weight: 700;
   }
 }
 .footer-social {
-  // .footer-social__list
+  &__list {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
 
+    &::after {
+      display: block;
+      position: absolute;
+      top: 65px;
+      content: "";
+      width: 75px;
+      border: 1px solid darken($color-gray, $amount: 15);
+    }
+  }
 
+  &__link {
+    padding: 9px;
+    transition: color 0.5s;
 
-  // .footer-social__item
-
-
-
-  // .footer-social__link
+    &:hover {
+      color: $color-accent;
+      transition: color 0.5s;
+    }
+  }
 }
-
+.fab {
+  font-size: 2.25rem;
+}

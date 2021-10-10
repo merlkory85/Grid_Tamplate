@@ -20,42 +20,55 @@
 
   &__copy--light {
     margin-right: -0.5em;
+
     letter-spacing: 0.33em;
-    font-weight: 100;
+
     color: darken($color-gray, $amount: 5);
+
+    font-weight: 100;
   }
 
   &__copy--bold {
     letter-spacing: 0.05em;
+
     color: $color-gray-light;
+
     font-weight: 700;
   }
 }
 .footer-social {
   &__list {
     position: relative;
+
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
+
     margin-bottom: 50px;
 
     &::after {
-      display: block;
       position: absolute;
       top: 65px;
-      content: "";
+
+      display: block;
+
       width: 75px;
+
+      content: "";
+
       border: 1px solid darken($color-gray, $amount: 15);
     }
   }
 
   &__link {
     padding: 9px;
+
     transition: color 0.5s;
 
     &:hover {
-      color: $color-accent;
       transition: color 0.5s;
+
+      color: $color-accent;
     }
   }
 }

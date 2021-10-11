@@ -369,7 +369,7 @@ li {
 .about__wrapper--img {
   display: grid;
   -ms-flex-line-pack: top;
-      align-content: top;
+      align-content: flex-start;
   justify-items: center;
 }
 .about__wrapper--text {

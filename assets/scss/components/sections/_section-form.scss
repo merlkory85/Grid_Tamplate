@@ -41,7 +41,10 @@
   color: $color-light;
   border: 2px solid rgba(#836161, 0);
   border-bottom-color: rgba($color-light, 0.25);
+  outline: none;
   background-color: rgba($color-light, 0.05);
+
+  font-size: 1.125rem;
 
   @include lg {
     font-size: 1.125rem;
@@ -50,7 +53,12 @@
   &:hover {
     border-color: rgba($color-light, 0.15);
     border-bottom-color: $color-light;
+    border-radius: 0;
     background-color: rgba($color-light, 0.15);
+
+    &::placeholder {
+      color: lighten($color: $color-gray, $amount: 10);
+    }
   }
 }
 

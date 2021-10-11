@@ -60,23 +60,12 @@
       grid-template-columns: 1fr;
     }
   }
-
-  // .posts__action
-
-  // &__action {
-  // }
 }
 .posts-item {
   position: relative;
 
   &:hover &__image {
     transform: scale(1.1);
-  }
-
-  &:hover &__caption {
-    transition: background-color 0.5s;
-
-    background-color: darken($color: #eeeeee, $amount: 20);
   }
 
   &__link {

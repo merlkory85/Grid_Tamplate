@@ -53,12 +53,17 @@
   &:hover {
     border-color: rgba($color-light, 0.15);
     border-bottom-color: $color-light;
-    border-radius: 0;
     background-color: rgba($color-light, 0.15);
 
     &::placeholder {
       color: lighten($color: $color-gray, $amount: 10);
     }
+  }
+
+  &:focus {
+    border-color: rgba($color-light, 0.15);
+    border-bottom-color: $color-light;
+    background-color: rgba($color-light, 0.15);
   }
 }
 

@@ -64,9 +64,9 @@
 .posts-item {
   position: relative;
 
-  &:hover &__image {
-    transform: scale(1.1);
-  }
+  // &:hover &__image {
+  //   transform: scale(1.1);
+  // }
 
   &__link {
     display: grid;

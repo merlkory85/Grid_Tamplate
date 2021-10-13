@@ -431,19 +431,19 @@ li {
   background-color: rgba(255, 255, 255, 0.15);
 }
 .form-input:hover::-webkit-input-placeholder {
-  color: #7d8fa1;
+  color: #ffffff;
 }
 .form-input:hover::-moz-placeholder {
-  color: #7d8fa1;
+  color: #ffffff;
 }
 .form-input:hover:-ms-input-placeholder {
-  color: #7d8fa1;
+  color: #ffffff;
 }
 .form-input:hover::-ms-input-placeholder {
-  color: #7d8fa1;
+  color: #ffffff;
 }
 .form-input:hover::placeholder {
-  color: #7d8fa1;
+  color: #ffffff;
 }
 .form-input:focus {
   border-color: rgba(255, 255, 255, 0.15);
@@ -485,13 +485,10 @@ li {
 }
 
 .posts-item {
-  position: relative;
-}
-.posts-item__link {
-  display: grid;
-  overflow: hidden;
   height: 100%;
   grid-template-rows: 300px 1fr;
+  display: grid;
+  overflow: hidden;
 }
 .posts-item__image {
   display: -webkit-box;

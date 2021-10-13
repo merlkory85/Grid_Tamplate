@@ -62,20 +62,12 @@
   }
 }
 .posts-item {
-  position: relative;
+  display: grid;
+  overflow: hidden;
 
-  // &:hover &__image {
-  //   transform: scale(1.1);
-  // }
+  height: 100%;
 
-  &__link {
-    display: grid;
-    overflow: hidden;
-
-    height: 100%;
-
-    grid-template-rows: 300px 1fr;
-  }
+  grid-template-rows: 300px 1fr;
 
   // .posts-item__image
 

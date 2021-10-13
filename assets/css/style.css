@@ -429,26 +429,56 @@ li {
   border-color: rgba(255, 255, 255, 0.15);
   border-bottom-color: #ffffff;
   background-color: rgba(255, 255, 255, 0.15);
+  -webkit-transition: background-color 0.5s, border-color 0.5s;
+  -o-transition: background-color 0.5s, border-color 0.5s;
+  transition: background-color 0.5s, border-color 0.5s;
 }
 .form-input:hover::-webkit-input-placeholder {
+  -webkit-transition: color, 0.5s;
+  transition: color, 0.5s;
   color: #ffffff;
 }
 .form-input:hover::-moz-placeholder {
+  -moz-transition: color, 0.5s;
+  transition: color, 0.5s;
   color: #ffffff;
 }
 .form-input:hover:-ms-input-placeholder {
+  -ms-transition: color, 0.5s;
+  transition: color, 0.5s;
   color: #ffffff;
 }
 .form-input:hover::-ms-input-placeholder {
+  -ms-transition: color, 0.5s;
+  transition: color, 0.5s;
   color: #ffffff;
 }
 .form-input:hover::placeholder {
+  -webkit-transition: color, 0.5s;
+  -o-transition: color, 0.5s;
+  transition: color, 0.5s;
+  color: #ffffff;
+}
+.form-input:hover::-webkit-input-placeholder:focus {
+  color: #ffffff;
+}
+.form-input:hover::-moz-placeholder:focus {
+  color: #ffffff;
+}
+.form-input:hover:-ms-input-placeholder:focus {
+  color: #ffffff;
+}
+.form-input:hover::-ms-input-placeholder:focus {
+  color: #ffffff;
+}
+.form-input:hover::placeholder:focus {
   color: #ffffff;
 }
 .form-input:focus {
   border-color: rgba(255, 255, 255, 0.15);
   border-bottom-color: #ffffff;
   background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
 }
 
 .btn {
@@ -485,10 +515,10 @@ li {
 }
 
 .posts-item {
-  height: 100%;
-  grid-template-rows: 300px 1fr;
   display: grid;
   overflow: hidden;
+  height: 100%;
+  grid-template-rows: 300px 1fr;
 }
 .posts-item__image {
   display: -webkit-box;
@@ -709,6 +739,13 @@ li {
     font-size: 1.125rem;
   }
   .posts__wraper {
+    grid-template-areas: "p1 p1 p2" "p3 p4 p4" "p5 p5 p6";
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1339.8px) and (min-width: 1200px) {
+  .posts__wraper {
     grid-template-areas: "p1 p1 p2 p3" "p4 p5 p6 p6";
     grid-template-columns: repeat(4, 1fr);
   }
@@ -755,8 +792,8 @@ li {
     font-size: 1rem;
   }
   .posts__wraper {
-    grid-template-areas: "p1 p1 p2" "p3 p4 p4" "p5 p5 p6";
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "p1 p2" "p3 p4" "p5 p6";
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -836,8 +873,8 @@ li {
     grid-column-start: 1;
   }
   .posts__wraper {
-    grid-template-areas: "p1 p2" "p3 p4" "p5 p6";
-    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6";
+    grid-template-columns: 1fr;
   }
 }
 

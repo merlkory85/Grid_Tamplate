@@ -50,22 +50,34 @@
     font-size: 1.125rem;
   }
 
+
+
   &:hover {
+    transition: background-color 0.5s, border-color 0.5s;
+
     border-color: rgba($color-light, 0.15);
     border-bottom-color: $color-light;
     background-color: rgba($color-light, 0.15);
 
     &::placeholder {
+      transition: color, 0.5s;
+
       color: $color-light;
+
+      &:focus {
+        color: $color-light;
+      }
     }
   }
 
   &:focus {
+    color: $color-light;
     border-color: rgba($color-light, 0.15);
     border-bottom-color: $color-light;
     background-color: rgba($color-light, 0.15);
   }
 }
+
 
 .btn {
   height: 60px;

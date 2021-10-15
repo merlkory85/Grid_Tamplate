@@ -9,7 +9,9 @@
   }
 
   &__title {
-    margin-bottom: 70px;
+    margin-bottom: 2.625rem;
+
+    letter-spacing: 0.1em;
 
     color: $color-primary;
 
@@ -25,37 +27,36 @@
     @include lg {
       font-size: 1.5rem;
     }
+    @include sm {
+      text-align: center;
+    }
   }
 
   &__wraper {
     display: grid;
 
-    padding-bottom: 20px;
+    padding-bottom: $gap;
 
-    gap: 20px;
-    @include xl-min  {
-      grid-template-areas: 
-      "p1 p1 p2 p3"
+    gap: $gap;
+    @include xl-min {
+      grid-template-areas: "p1 p1 p2 p3"
       "p4 p5 p6 p6";
       grid-template-columns: repeat(4, 1fr);
     }
     @include xl {
-      grid-template-areas: 
-      "p1 p1 p2"
+      grid-template-areas: "p1 p1 p2"
       "p3 p4 p4"
       "p5 p5 p6";
       grid-template-columns: repeat(3, 1fr);
     }
     @include lg {
-      grid-template-areas: 
-      "p1 p2"
+      grid-template-areas: "p1 p2"
       "p3 p4"
       "p5 p6";
       grid-template-columns: 1fr 1fr;
     }
     @include md-sm {
-      grid-template-areas: 
-      "p1"
+      grid-template-areas: "p1"
       "p2"
       "p3"
       "p4"
@@ -76,7 +77,7 @@
 }
 .posts-item {
   display: grid;
-  overflow: hidden;
+  // overflow: hidden;
 
   height: 100%;
 
@@ -119,9 +120,8 @@
   }
 
   &__title {
-    margin-bottom: 2rem;
+    margin: 1rem 0;
 
-    transition: color 0.5s;
     text-align: center;
     letter-spacing: 0.05em;
 
@@ -132,10 +132,15 @@
   }
 
   &__text {
+    margin: 1rem 0;
+
     transition: color 0.5s;
     text-align: center;
+    letter-spacing: -0.001em;
 
     color: $color-gray;
+
+    font-size: 1rem;
   }
 }
 

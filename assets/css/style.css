@@ -475,19 +475,20 @@ li {
   width: 100%;
   color: #ffffff;
   border-color: rgba(255, 255, 255, 0);
-  border-bottom-color: rgba(255, 255, 255, 0.2);
+  border-bottom: 2.5px solid rgba(255, 255, 255, 0.2);
   background-color: rgba(255, 255, 255, 0.1);
 }
 .btn--form:hover {
   cursor: pointer;
-  border-color: #ffffff;
+  border: 2px solid #ffffff;
 }
 
 .posts {
   padding: 100px 0;
 }
 .posts__title {
-  margin-bottom: 70px;
+  margin-bottom: 2.625rem;
+  letter-spacing: 0.1em;
   color: #2d3651;
   font-family: "Roboto Slab", serif;
   font-size: 2.5rem;
@@ -501,7 +502,6 @@ li {
 
 .posts-item {
   display: grid;
-  overflow: hidden;
   height: 100%;
   grid-template-rows: 300px 1fr;
 }
@@ -542,10 +542,7 @@ li {
   background-color: #eeeeee;
 }
 .posts-item__title {
-  margin-bottom: 2rem;
-  -webkit-transition: color 0.5s;
-  -o-transition: color 0.5s;
-  transition: color 0.5s;
+  margin: 1rem 0;
   text-align: center;
   letter-spacing: 0.05em;
   color: #637588;
@@ -553,11 +550,14 @@ li {
   font-size: 1.125rem;
 }
 .posts-item__text {
+  margin: 1rem 0;
   -webkit-transition: color 0.5s;
   -o-transition: color 0.5s;
   transition: color 0.5s;
   text-align: center;
   color: #637588;
+  letter-spacing: -0.001em;
+  font-size: 1rem;
 }
 
 .posts__action {
@@ -896,6 +896,9 @@ li {
   .skills__container {
     gap: 20px;
     grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
+  }
+  .posts__title {
+    text-align: center;
   }
   .posts__wraper {
     grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6";
